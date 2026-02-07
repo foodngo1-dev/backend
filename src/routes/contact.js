@@ -21,7 +21,7 @@ const sendContactEmail = async (contactData) => {
   
   const mailOptions = {
     from: `"Feed India Contact Form" <${process.env.EMAIL_USER || 'noreply@feedindia.org'}>`,
-    to: 's.s.madhuresh1945@gmail.com',
+    to: 'foodngo1@gmail.com',
     replyTo: contactData.email,
     subject: `[Feed India] New ${contactData.subject} Inquiry from ${contactData.name}`,
     html: `
@@ -191,3 +191,4 @@ router.get('/my-inquiries', async (req, res, next) => {
 });
 
 module.exports = router;
+
