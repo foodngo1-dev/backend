@@ -27,6 +27,7 @@ app.use(cors({
     'http://localhost:8081',
     'http://localhost:5173',
     'http://localhost:3000',
+    'https://frontend-one-pearl-64.vercel.app',
   ],
   credentials: true,
 }));
@@ -81,3 +82,4 @@ process.on('unhandledRejection', (err, promise) => {
   // Close server & exit process
   server.close(() => process.exit(1));
 });
+
