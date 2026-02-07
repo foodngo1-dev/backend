@@ -6,6 +6,9 @@ const Contact = require('../models/Contact');
 // Email configuration - using Gmail SMTP
 const createTransporter = () => {
   return nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,       // CHANGE: 587 -> 465
+    secure: true,
     service: 'gmail',
     auth: {
       user: process.env.EMAIL_USER || 'your-email@gmail.com',
@@ -191,4 +194,5 @@ router.get('/my-inquiries', async (req, res, next) => {
 });
 
 module.exports = router;
+
 
